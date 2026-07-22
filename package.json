@@ -1,0 +1,25 @@
+{
+  "name": "ticket-flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidottivmurilo/ticket-flow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vidottivmurilo/ticket-flow/issues"
+  },
+  "homepage": "https://github.com/vidottivmurilo/ticket-flow#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "zod": "^4.4.3"
+  }
+}
