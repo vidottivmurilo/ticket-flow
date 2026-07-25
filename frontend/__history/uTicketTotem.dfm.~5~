@@ -1,0 +1,38 @@
+object formTicketTotem: TformTicketTotem
+  Left = 0
+  Top = 0
+  Caption = 'Ticket Totem'
+  ClientHeight = 416
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -27
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 37
+  object pnlSenha: TPanel
+    Left = 0
+    Top = 183
+    Width = 624
+    Height = 233
+    Align = alBottom
+    TabOrder = 0
+    ExplicitTop = 0
+  end
+  object btnRetirarSenha: TButton
+    Left = 200
+    Top = 53
+    Width = 209
+    Height = 65
+    Caption = 'Retirar Senha'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnRetirarSenhaClick
+  end
+end

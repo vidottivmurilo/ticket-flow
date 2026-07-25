@@ -1,0 +1,71 @@
+unit uTicketFlow;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, RESTRequest4D, System.JSON;
+
+type
+  TformTicketFlow = class(TForm)
+    edtGuiche: TEdit;
+    lblGuiche: TLabel;
+    lblSenhaChamada: TLabel;
+    lblTituloSenhaChamada: TLabel;
+    sbtnChamarSenha: TSpeedButton;
+    procedure sbtnChamarSenhaClick(Sender: TObject);
+  private
+    procedure ChamarSenha(guiche: string);
+  end;
+
+var
+  formTicketFlow: TformTicketFlow;
+
+implementation
+
+
+{$R *.dfm}
+
+{ TformTicketFlow }
+
+procedure TformTicketFlow.ChamarSenha(guiche: string);
+var
+  LResponse: IResponse;
+  LBody: string;
+begin
+  LBody := '{"guiche": ' + guiche + '}';
+  try
+    LResponse := TRequest.New.BaseURL('http://localhost:3000')
+      .Resource('tickets/chamar')
+      .Accept('application/json')
+      .AddBody(LBody)
+      .Post;
+
+    if LResponse.StatusCode = 200 then
+      Result := LResponse.Content
+    else
+      Result := 'Erro!!'
+
+  except
+    Result := 'Erro ao conectar com o servidor!'
+  end;
+
+end;
+
+procedure TformTicketFlow.sbtnChamarSenhaClick(Sender: TObject);
+var
+  guiche: string;
+begin
+  guiche := edtGuiche.Text;
+
+  if guiche = '' then begin
+    ShowMessage('É necessário informar um guichê!');
+    edtGuiche.SetFocus;
+    Exit;
+  end;
+
+  ShowMessage(ChamarSenha(guiche));
+
+end;
+
+end.
