@@ -1,6 +1,6 @@
 # 🎟️ Ticket Flow
 
-**Ticket Flow** é um sistema completo de gestão e chamamento de senhas para atendimento, desenvolvido com foco em performance e reatividade. O projeto simula o ecossistema de uma agência bancária ou clínica médica, onde terminais de autoatendimento (Totens), mesas de funcionários (Atendentes) e painéis de exibição (Monitores/TVs) precisam conversar entre si de forma perfeitamente sincronizada.
+**Ticket Flow** é um sistema de gestão e chamamento de senhas para atendimento, desenvolvido com foco em performance e reatividade. O projeto simula o ecossistema de uma agência bancária ou clínica médica, onde terminais de autoatendimento (Totens), mesas de funcionários (Atendentes) e painéis de exibição (Monitores/TVs) precisam conversar entre si de forma perfeitamente sincronizada.
 
 O grande diferencial deste projeto é a integração **em tempo real** entre uma API Backend moderna construída em **Node.js** e aplicações Desktop nativas em **Delphi VCL**, utilizando a tecnologia de **WebSockets**.
 
