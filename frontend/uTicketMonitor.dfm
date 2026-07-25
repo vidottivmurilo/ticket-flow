@@ -1,0 +1,50 @@
+object formTicketMonitor: TformTicketMonitor
+  Left = 0
+  Top = 0
+  Caption = 'Ticket Monitor'
+  ClientHeight = 670
+  ClientWidth = 912
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnClose = FormClose
+  OnCreate = FormCreate
+  TextHeight = 15
+  object pnlSenha: TPanel
+    Left = 0
+    Top = 328
+    Width = 912
+    Height = 342
+    Align = alBottom
+    Caption = 'Senha: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -67
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object pnlGuiche: TPanel
+    Left = 0
+    Top = 0
+    Width = 912
+    Height = 328
+    Align = alClient
+    Caption = 'Guich'#234': '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -67
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    ExplicitLeft = 1
+    ExplicitTop = 1
+    ExplicitWidth = 622
+    ExplicitHeight = 247
+  end
+end

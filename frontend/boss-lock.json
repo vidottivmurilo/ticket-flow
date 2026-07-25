@@ -2,6 +2,14 @@
 	"hash": "d41d8cd98f00b204e9800998ecf8427e",
 	"updated": "2026-07-25T16:27:02.3454357-03:00",
 	"installedModules": {
+		"github.com/mateusvicente100/websocket-client": {
+			"name": "websocket-client",
+			"version": "v1.0.16",
+			"hash": "6bb230b80708be670974e17c8e650cc1",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
 		"github.com/viniciussanchez/restrequest4delphi": {
 			"name": "restrequest4delphi",
 			"version": "v4.0.29",

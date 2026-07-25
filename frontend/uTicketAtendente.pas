@@ -1,25 +1,27 @@
-unit uTicketFlow;
+unit uTicketAtendente;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, RESTRequest4D, System.JSON;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, RESTRequest4D, System.JSON,
+  Vcl.ExtCtrls;
 
 type
-  TformTicketFlow = class(TForm)
+  TformTicketAtendente = class(TForm)
     edtGuiche: TEdit;
     lblGuiche: TLabel;
-    lblSenhaChamada: TLabel;
     lblTituloSenhaChamada: TLabel;
     sbtnChamarSenha: TSpeedButton;
+    pnlSenhaChamada: TPanel;
     procedure sbtnChamarSenhaClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     procedure ChamarSenha(guiche: string);
   end;
 
 var
-  formTicketFlow: TformTicketFlow;
+  frmAtendimento: TformTicketAtendente;
 
 implementation
 
@@ -28,7 +30,7 @@ implementation
 
 { TformTicketFlow }
 
-procedure TformTicketFlow.ChamarSenha(guiche: string);
+procedure TformTicketAtendente.ChamarSenha(guiche: string);
 var
   LResponse: IResponse;
   LBody: string;
@@ -45,7 +47,7 @@ begin
     LJson := TJSONObject.ParseJSONValue(LResponse.Content) as TJSONObject;
     try
       if LResponse.StatusCode = 200 then
-        lblSenhaChamada.Caption := LJson.GetValue<Integer>('senha').ToString
+        pnlSenhaChamada.Caption := LJson.GetValue<Integer>('senha').ToString
 
       else if LResponse.StatusCode = 404 then
         ShowMessage(LJson.GetValue<string>('error'))
@@ -63,7 +65,13 @@ begin
 
 end;
 
-procedure TformTicketFlow.sbtnChamarSenhaClick(Sender: TObject);
+procedure TformTicketAtendente.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmAtendimento := nil;
+end;
+
+procedure TformTicketAtendente.sbtnChamarSenhaClick(Sender: TObject);
 var
   guiche: string;
 begin

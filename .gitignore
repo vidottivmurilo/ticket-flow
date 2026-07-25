@@ -26,3 +26,17 @@ logs
 .DS_Store
 coverage/
 .nyc_output/
+
+# Delphi e Boss (Frontend)
+frontend/modules/
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.~*
+*.local
+*.identcache
+*.stat
+__history/
+__recovery/

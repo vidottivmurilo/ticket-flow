@@ -1,40 +1,23 @@
-object formTicketFlow: TformTicketFlow
+object formTicketAtendente: TformTicketAtendente
   Left = 0
   Top = 0
-  Caption = 'Ticket Flow'
-  ClientHeight = 249
-  ClientWidth = 137
+  Caption = 'Ticket Atendente'
+  ClientHeight = 280
+  ClientWidth = 330
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  DesignSize = (
-    137
-    249)
+  OnClose = FormClose
   TextHeight = 15
   object lblGuiche: TLabel
-    Left = 8
+    Left = 104
     Top = 8
     Width = 37
     Height = 15
     Caption = 'Guich'#234
-  end
-  object lblSenhaChamada: TLabel
-    AlignWithMargins = True
-    Left = 8
-    Top = 168
-    Width = 121
-    Height = 45
-    Alignment = taCenter
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -33
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
   end
   object lblTituloSenhaChamada: TLabel
     Left = 8
@@ -44,7 +27,7 @@ object formTicketFlow: TformTicketFlow
     Caption = 'Senha Chamada:'
   end
   object sbtnChamarSenha: TSpeedButton
-    Left = 8
+    Left = 104
     Top = 88
     Width = 121
     Height = 22
@@ -52,11 +35,19 @@ object formTicketFlow: TformTicketFlow
     OnClick = sbtnChamarSenhaClick
   end
   object edtGuiche: TEdit
-    Left = 8
+    Left = 104
     Top = 29
     Width = 121
     Height = 23
     NumbersOnly = True
     TabOrder = 0
+  end
+  object pnlSenhaChamada: TPanel
+    Left = 0
+    Top = 168
+    Width = 330
+    Height = 112
+    Align = alBottom
+    TabOrder = 1
   end
 end

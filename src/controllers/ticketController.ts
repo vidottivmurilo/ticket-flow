@@ -17,8 +17,13 @@ export class TicketController {
                 return res.status(404).json({ error: "A fila está vazia. Nenhuma senha pendente." });
             }
 
-            const io = req.app.get('io');
-            io.emit('nova_senha', resultado);
+            const wss = req.app.get('wss');
+
+            wss.clients.forEach((client: any) => {
+                if (client.readyState === 1) {
+                    client.send(JSON.stringify(resultado));
+                }
+            });
 
             return res.status(200).json(resultado)
 

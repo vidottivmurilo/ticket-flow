@@ -2,13 +2,16 @@ program projectTicketFlow;
 
 uses
   Vcl.Forms,
-  uTicketFlow in 'uTicketFlow.pas' {formTicketFlow};
+  uTicketAtendente in 'uTicketAtendente.pas' {formTicketAtendente},
+  uMenuPrincipal in 'uMenuPrincipal.pas' {frmPrincipal},
+  uTicketTotem in 'uTicketTotem.pas' {formTicketTotem},
+  uTicketMonitor in 'uTicketMonitor.pas' {formTicketMonitor};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TformTicketFlow, formTicketFlow);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.Run;
 end.
