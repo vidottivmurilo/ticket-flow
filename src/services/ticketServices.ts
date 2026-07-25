@@ -1,4 +1,3 @@
-import { Ticket } from "../types";
 import pool from "../config/database";
 
 export class TicketService {
