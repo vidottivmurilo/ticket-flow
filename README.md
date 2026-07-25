@@ -43,4 +43,4 @@ Para que o sistema ficasse interativo, os formulários deixaram de usar `ShowMod
 
 ---
 
-*Este é um projeto acadêmico focado em design de software, conectividade inter-plataforma e boas práticas modernas de codificação.*
+*Este é um projeto de estudo focado em design de software, conectividade inter-plataforma e boas práticas modernas de codificação.*
