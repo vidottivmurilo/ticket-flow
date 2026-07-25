@@ -25,7 +25,7 @@ A arquitetura escolhida foi um **Monorepo**, mantendo os ecossistemas separados,
 
 ## 🧠 O Que Aprendemos com a Construção deste Projeto?
 
-O desenvolvimento deste laboratório gerou *insights* profundos, principalmente na área de interoperabilidade e gerenciamento de concorrência. Destacam-se os seguintes aprendizados:
+O desenvolvimento deste projeto destacam-se os seguintes aprendizados:
 
 ### 1. Dialetos vs. Protocolos Universais (O Desafio do Tempo Real)
 Inicialmente, tentamos utilizar a famosa biblioteca `socket.io` no Node.js. O grande aprendizado foi perceber que o `socket.io` fala um "dialeto" próprio por cima do protocolo WebSocket. Isso dificultou a vida do lado do cliente Delphi. 
