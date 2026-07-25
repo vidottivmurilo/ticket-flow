@@ -1,4 +1,4 @@
-# 🚀 Estudo de Caso: Ticket Flow (Integração Delphi & Node.js)
+# 🚀 Ticket Flow (Integração Delphi & Node.js)
 
 Este projeto nasceu como um laboratório prático para explorar a integração de ponta a ponta entre uma linguagem compilada clássica para Desktop e um ecossistema backend moderno e assíncrono. O objetivo central aqui não é a regra de negócio em si (um sistema de senhas), mas sim **a arquitetura, as tecnologias combinadas e os desafios de sincronização em tempo real.**
 
