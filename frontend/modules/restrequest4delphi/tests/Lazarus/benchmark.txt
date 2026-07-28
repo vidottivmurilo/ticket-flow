@@ -1,1 +1,0 @@
-Tempo gasto para 20.000 acessos ao ContentStream: 47 ms
