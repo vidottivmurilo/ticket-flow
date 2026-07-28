@@ -1,0 +1,6 @@
+# Configurações para o GitHub Linguist ignorar arquivos gerados/de formulário no cálculo de linguagem
+*.dfm linguist-generated
+*.dproj linguist-generated
+*.res linguist-generated
+boss-lock.json linguist-generated
+package-lock.json linguist-generated
